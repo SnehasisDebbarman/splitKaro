@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "splitkaro",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -16,13 +16,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.splitkaro.app",
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "This app does not access your calendar.",
+        "NSUserTrackingUsageDescription": "We do not track users."
+      }
     },
     "android": {
+      "package": "com.splitkaro.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": []
     },
     "web": {
       "bundler": "metro",
@@ -32,8 +39,21 @@
     "plugins": [
       "expo-router"
     ],
+    "updates": {
+      "url": "",
+      "fallbackToCacheTimeout": 0
+    },
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    },
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "owner": ""
   }
 }
