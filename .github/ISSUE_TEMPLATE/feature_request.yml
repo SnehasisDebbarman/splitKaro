@@ -1,0 +1,68 @@
+name: "Feature request"
+description: "Suggest an idea or enhancement for the app"
+title: "feat: <short summary>"
+labels: ["feature", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill this out!
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Core product
+        - UI/UX
+        - Navigation
+        - State management
+        - Data layer
+        - Authentication
+        - Networking
+        - Notifications
+        - Offline-first
+        - Testing
+        - CI/CD
+        - Accessibility
+        - Internationalization
+        - Analytics
+        - Quality & DX
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One or two sentences describing the feature
+      placeholder: e.g., Add Group Detail screen showing members, expenses, and balances
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Problem/Motivation
+      description: What problem does this solve? Why is it valuable?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Measurable criteria for completion
+      placeholder: |
+        - User can create a group with a name
+        - Invite link can be shared and joined
+        - New group appears in list after creation
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Out of scope
+      description: What is explicitly not included?
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Links, designs, screenshots
+
