@@ -1,0 +1,35 @@
+{
+  "issues": [
+    {
+      "title": "feat(core): Implement Groups and Expenses domain skeleton",
+      "labels": ["feature", "core"],
+      "assignees": [],
+      "body": "### Summary\nCreate the foundational data models and screens for Groups and Expenses to support future split functionality.\n\n### Motivation\nNeeded to move beyond the Expo starter and begin the split-tracking product.\n\n### Acceptance Criteria\n- Group List screen exists and is reachable from tabs\n- Group Detail screen with placeholder sections: Members, Expenses, Balance\n- New Expense screen route with basic form scaffold\n- Types/interfaces for Group, Member, Expense defined in a shared types file\n\n### Out of scope\n- Real persistence\n- Auth\n- Networking\n"
+    },
+    {
+      "title": "feat(ui): Add design system with NativeWind and theme tokens",
+      "labels": ["feature", "uiux"],
+      "assignees": [],
+      "body": "### Summary\nIntroduce a tokenized design system (colors, spacing, typography) with reusable components (Button, Input, Card).\n\n### Motivation\nEnsure consistent UI and speed up future development.\n\n### Acceptance Criteria\n- Tailwind theme extended with color/spacing/typography tokens\n- Button, Input, Card components added and used in at least one screen\n- Dark mode styles validated\n\n### Out of scope\n- Full redesign of existing demo screens\n"
+    },
+    {
+      "title": "feat(state): Add React Query and basic API client",
+      "labels": ["feature", "state"],
+      "assignees": [],
+      "body": "### Summary\nInstall and set up TanStack Query and an axios-based API client with interceptors.\n\n### Motivation\nPrepare for server communication with robust caching and error handling.\n\n### Acceptance Criteria\n- react-query provider added at root\n- api client module created with baseURL from env and basic interceptors\n- example query hook wired to a demo endpoint\n\n### Out of scope\n- Real backend integration\n"
+    },
+    {
+      "title": "feat(auth): Add anonymous or email auth placeholder",
+      "labels": ["feature", "auth"],
+      "assignees": [],
+      "body": "### Summary\nAdd a minimal auth gate to prepare for real authentication.\n\n### Motivation\nEnable user-specific groups in the future.\n\n### Acceptance Criteria\n- Auth gate screen with sign-in button (no-op or mocked)\n- Conditional navigation: unauthenticated -> auth screen, authenticated -> tabs\n- Types for User and session state\n\n### Out of scope\n- Real OAuth or password flows\n"
+    },
+    {
+      "title": "chore(ci): Add GitHub Actions for lint, typecheck, and tests",
+      "labels": ["chore", "ci"],
+      "assignees": [],
+      "body": "### Summary\nSet up a basic CI workflow to run ESLint, TypeScript, and Jest on PRs.\n\n### Motivation\nCatch issues early and keep main branch healthy.\n\n### Acceptance Criteria\n- .github/workflows/ci.yml runs on push/pull_request\n- Steps: setup node, install, typecheck, test, (optional) lint\n- Badges added to README\n\n### Out of scope\n- EAS build\n"
+    }
+  ]
+}
+
