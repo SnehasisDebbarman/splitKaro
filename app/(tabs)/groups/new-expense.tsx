@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Alert, TextInput } from 'react-native';
+import { Alert } from 'react-native';
 import { Text, View } from '../../../components/Themed';
+import Input from '../../../components/ui/Input';
+import Button from '../../../components/ui/Button';
 
 export default function NewExpenseScreen() {
   const [description, setDescription] = useState('');
@@ -15,25 +17,23 @@ export default function NewExpenseScreen() {
       <Text style={{ fontSize: 20, fontWeight: '700' }}>New Expense</Text>
       <View style={{ height: 16 }} />
       <Text>Description</Text>
-      <TextInput
+      <Input
         value={description}
         onChangeText={setDescription}
         placeholder="e.g. Groceries"
-        style={{ borderWidth: 1, borderColor: '#e5e7eb', borderRadius: 8, padding: 12, marginTop: 8 }}
+        className="mt-2"
       />
       <View style={{ height: 16 }} />
       <Text>Amount</Text>
-      <TextInput
+      <Input
         value={amount}
         onChangeText={setAmount}
         keyboardType="decimal-pad"
         placeholder="e.g. 24.99"
-        style={{ borderWidth: 1, borderColor: '#e5e7eb', borderRadius: 8, padding: 12, marginTop: 8 }}
+        className="mt-2"
       />
       <View style={{ height: 24 }} />
-      <Text onPress={handleSubmit} style={{ backgroundColor: '#2563eb', color: 'white', padding: 12, borderRadius: 8, textAlign: 'center', fontWeight: '700' }}>
-        Save Expense
-      </Text>
+      <Button label="Save Expense" onPress={handleSubmit} />
     </View>
   );
 }
